@@ -1,0 +1,17 @@
+{
+	frankenphp
+	metrics
+    admin 0.0.0.0:2019
+    log {
+        output stdout
+        format console
+    }
+}
+
+localhost {
+	root * /app/public/
+	encode zstd br gzip
+	php_server {
+		try_files {path} index.php
+	}
+}

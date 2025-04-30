@@ -24,4 +24,4 @@ RUN chown -R www-data:www-data /app
 
 EXPOSE 80
 
-CMD ["frankenphp", "php-server", "-r", "public/"]
+CMD ["frankenphp", "run"]
