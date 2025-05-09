@@ -10,3 +10,9 @@ services:
       - "2019:2019"
     volumes:
       - ./laravel:/app
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
